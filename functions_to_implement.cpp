@@ -31,10 +31,11 @@ int RemoveTwos(int original) {
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
 std::vector<int> MultiplesFilter(std::vector<int> a, int divides_by){
     for(int i=0; i < a.size(); i++){
-        if(a % divides_by != 0){
-            a.erase(a[i])
+        if(a[i] % divides_by != 0){
+            a.erase(i);
         }
     }
+    return a;
 }
 
 // returns a vector with true for even numbers and false for odd numbers
